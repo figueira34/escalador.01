@@ -1,19 +1,18 @@
-# 🎈 Blank app template
+# ⚽ Escalador Cartola FC
 
-A simple Streamlit app template for you to modify!
+## Descrição
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+O **Escalador Cartola FC** é um aplicativo desenvolvido com Streamlit que permite aos usuários escolher uma formação de futebol e gerar uma escalação com base em uma lógica pré-estabelecidade. O aplicativo exibe a escalação selecionada e permite o download dos dados em formato CSV.
 
-### How to run it on your own machine
+## Funcionalidades
 
-1. Install the requirements
+- Seleção de formações de futebol
+- Geração de escalação com base na formação escolhida
+- Exibição da escalação em uma tabela
+- Cálculo e exibição dos totais de média e preço
+- Opção para baixar a escalação em formato CSV
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## Link: <https://escalador01.streamlit.app/>
 
-2. Run the app
+## Parâmetros:
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
