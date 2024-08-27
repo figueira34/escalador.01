@@ -42,8 +42,8 @@ def run_my_code(selected_formation):
     final['Diferença'] = final['mandante_nota'] - final['visitante_nota']
     final = final[['Mandante', 'ID Mandante', 'mandante_nota', 'Visitante', 'ID Visitante', 'visitante_nota', 'Diferença']].rename(columns={'mandante_nota': 'Nota Mandante', 'visitante_nota': 'Nota Visitante'})
 
-    mandante_df = final[final['Diferença'] > 0][['Mandante', 'ID Mandante', 'Diferença']].rename(columns={'Mandante': 'Time', 'ID Mandante': 'ID'})
-    visitante_df = final[final['Diferença'] < -0.25][['Visitante', 'ID Visitante', 'Diferença']].rename(columns={'Visitante': 'Time', 'ID Visitante': 'ID'})
+    mandante_df = final[final['Diferença'] > 1][['Mandante', 'ID Mandante', 'Diferença']].rename(columns={'Mandante': 'Time', 'ID Mandante': 'ID'})
+    visitante_df = final[final['Diferença'] < -0.5][['Visitante', 'ID Visitante', 'Diferença']].rename(columns={'Visitante': 'Time', 'ID Visitante': 'ID'})
     escalar = pd.concat([mandante_df, visitante_df], ignore_index=True)
     escalar['Diferença'] = abs(escalar['Diferença'])
     escalar = escalar.sort_values(by='Diferença', ascending=False).reset_index(drop=True)
